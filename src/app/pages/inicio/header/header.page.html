@@ -1,0 +1,72 @@
+<!-- <p>
+  CoffeCodez
+</p> -->
+<div>
+  <div class="container-menu background-principal">
+    <div class="menu-logo">
+      <!-- <ion-avatar>
+        <img src="../../../../assets/img/logo.jpeg" class="menu-img" />
+      </ion-avatar> -->
+    </div>
+    <div class="menu-datos">
+      <div>
+        <ul class="menu-subdatos">
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Sobre mí</a></li>
+          <li><a href="">Protafolio</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-filtros-web">
+    <div *ngFor="let boton of botones" class="boton-container">
+      <button (mouseenter)="mostrarLista(boton.id)" (mouseleave)="ocultarLista(boton.id)">{{ boton.nombre }}</button>
+      <ul *ngIf="boton.mostrarLista" (mouseenter)="mostrarLista(boton.id)" (mouseleave)="ocultarLista(boton.id)">
+        <li *ngFor="let elemento of boton.elementos">{{ elemento }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-menu-movil">
+  <div>
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title style="text-align: center;">CoffeCodez</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="content-menu-movil">
+        <div>
+          <ul class="menu-subdatos">
+            <li><a href="">INICIO</a></li>
+            <li><a href="">SOBRE MÍ</a></li>
+            <li><a href="">PORTAFOLIO</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACTO</a></li>
+          </ul>
+        </div>
+
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar class="toolbar-movil">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <div class="menu-logo-movil">
+            <ion-avatar>
+              <img src="../../../../assets/img/logo.jpeg" class="menu-img" />
+            </ion-avatar>
+          </div>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.div-footer {
+    height: auto;
+    background-color: var(--ion-color-primary);
+}
+
+.div-footer-informacion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 60px;
+}
+
+.div-footer-quienes {
+    color: white;
+    padding: 0px 20px;
+}
+
+.p-p1,.p-p2 {
+    font-size: 13px;
+    text-align: justify;
+}
+
+.icono-redes {
+    font-size: 30px;
+    padding: 0px 3px;
+}
+
+.label-telefono {
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+.icon-telefono {
+    top: 3px;
+    position: relative;
+}
+
+@media (max-width:768px) {
+    .div-footer-informacion{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+    .div-footer-informacion{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width:470px) {
+    .div-footer-informacion {
+        padding: 30px 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
